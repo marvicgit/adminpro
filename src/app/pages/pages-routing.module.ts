@@ -7,12 +7,14 @@ import { Graficas1Component } from './graficas1/graficas1.component';
 import { AccountSettingComponent } from './account-setting/account-setting.component';
 import { PromesaComponent } from './promesa/promesa.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { LoginGuard } from '../services/service.index';
 
 
 const routes: Routes = [
   {
     path: '',
     component: PagesComponent,
+    canActivate: [LoginGuard],
     children: [
       { path: 'dashboard', component: DashboardComponent, data: { titulo: 'Dashboard' } },
       { path: 'progress', component: ProgressComponent, data: { titulo: 'Progress' } },
