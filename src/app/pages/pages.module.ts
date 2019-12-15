@@ -10,6 +10,9 @@ import { SharedModule } from '../shared/shared.module';
 import { AccountSettingComponent } from './account-setting/account-setting.component';
 import { PromesaComponent } from './promesa/promesa.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { PipesModule } from '../pipes/pipes.module';
+import { ProfileComponent } from './profile/profile.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,11 +24,14 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     AccountSettingComponent,
     PromesaComponent,
     RxjsComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,
     PagesRoutingModule,
-    SharedModule
+    FormsModule,
+    SharedModule,
+    PipesModule
   ],
   exports: [
     DashboardComponent,
