@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SettingService, SharedService, SidebarService, UsuarioService, LoginGuard } from '../service.index';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalUploadService } from 'src/app/components/modal-upload/modal-upload.service';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     SharedService,
     SidebarService,
     UsuarioService,
+    ModalUploadService,
     LoginGuard
   ]
 })
