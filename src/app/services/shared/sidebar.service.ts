@@ -18,7 +18,7 @@ export class SidebarService {
       ]
     },
     {
-      titulo: 'Mnatenimientos',
+      titulo: 'Mantenimientos',
       icono: 'mdi mdi-folder-lock-open',
       submenu: [
         { titulo: 'Usuarios', url: '/usuarios' },
