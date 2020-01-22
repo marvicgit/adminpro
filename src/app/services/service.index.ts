@@ -1,3 +1,4 @@
+export { AdminGuard } from './guards/admin.guard';
 export { LoginGuard } from './guards/login.guard';
 export { SubirArchivoService } from './subirArchivo/subir-archivo.service';
 export { SettingService } from './setting/setting.service';
