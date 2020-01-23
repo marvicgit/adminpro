@@ -19,7 +19,24 @@ export class UsuarioService {
               public http: HttpClient,
               public subirArchivo: SubirArchivoService) {
     this.cargarStorage();
-   }
+  }
+
+  refreshToken() {
+    let url = URL_SERVICIOS + '/login/refreshToken';
+    url += '?token=' + this.token;
+    return this.http.get(url)
+    .pipe(
+      map((resp: any) => {
+        this.token = resp.token;
+        localStorage.setItem('token', resp.token);
+        return true;
+      }), catchError(err => {
+        this.logout();
+        Swal.fire('Error refresh token', 'no fue posible renovar token', 'error');
+        return throwError(err);
+      }));
+  }
+
   estaLogueado() {
     return (this.token.length > 5) ? true : false;
   }

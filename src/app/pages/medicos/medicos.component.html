@@ -40,7 +40,7 @@
                     <tbody>
                         <tr *ngFor="let item of medicos">
                             <td class="w70">
-                                <img (click)="mostrarModal(item._id)" [src]="item.img | imagen:'medico'" class="img-50 img-circle pointer"/>
+                                <img [src]="item.img | imagen:'medico'" class="img-50 img-circle pointer"/>
                             </td>
                             <td>
                                 {{ item.nombre }}
@@ -59,12 +59,6 @@
                         </tr>
                     </tbody>
                 </table>
-                <button class="btn btn-secondary" (click)="cambiarDesde(-5)">
-                    Anteriores
-                </button>
-                <button class="btn btn-secondary" (click)="cambiarDesde(5)">
-                    Siguientes
-                </button>
             </div>
         </div>
     </div>
